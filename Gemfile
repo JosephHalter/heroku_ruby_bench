@@ -1,2 +1,6 @@
 source "http://rubygems.org"
+gem "sinatra", "1.2.6"
+gem "bson_ext", "1.3.1"
+gem "mongo_mapper", "0.9.1"
+gem "yajl-ruby", "0.8.2"
 gem "unicorn", "3.7.0"
