@@ -8,14 +8,12 @@ configure do
   config = {settings.environment => {"uri" => uri}}
   MongoMapper.setup config, settings.environment, {}
 end
-
 post "/restaurant" do
   body = Yajl::Parser.parse request.body
   restaurant = Restaurant.new body
   restaurant.save!
   [201, restaurant.to_json]
 end
-
 get "/restaurant/:id" do
   restaurant = Restaurant.find params[:id]
   restaurant ? restaurant.to_json : 404
