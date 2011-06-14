@@ -1,1 +1,1 @@
-web: bundle exec thin -p $PORT start
+web: bundle exec unicorn -p $PORT -c ./unicorn.rb
